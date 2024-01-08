@@ -1,0 +1,17 @@
+site_name: "Каптерка инженера-программиста"
+site_url: https://art-injener.github.io/
+nav:
+  - Home: index.md
+  - About: about.md
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: ru
+          name: Russian
+          build: true
+          site_name: "Каптерка инженера-программиста"
+          default: true
+theme:
+  name: readthedocs
