@@ -15,3 +15,8 @@ plugins:
           default: true
 theme:
   name: readthedocs
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: G-GGLCHNTQ3Z
