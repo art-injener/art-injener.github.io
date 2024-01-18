@@ -15,8 +15,9 @@ plugins:
           default: true
 theme:
   name: readthedocs
+  analytics:
+    gtag: G-GGLCHNTQ3Z
 extra:
   generator: false
-  analytics:
-    provider: google
-    property: G-GGLCHNTQ3Z
+
+google_analytics: ['G-GGLCHNTQ3Z', 'art-injener.github.io']
