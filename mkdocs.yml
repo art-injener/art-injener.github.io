@@ -19,5 +19,3 @@ theme:
     gtag: G-GGLCHNTQ3Z
 extra:
   generator: false
-
-google_analytics: ['G-GGLCHNTQ3Z', 'art-injener.github.io']
