@@ -1,5 +1,7 @@
 site_name: "Каптерка инженера-программиста"
 site_url: https://art-injener.github.io/
+copyright: Copyright &copy; 2024 Артем Данильченко
+
 nav:
   - Home: index.md
   - Обо мне: about.md
@@ -22,5 +24,12 @@ theme:
   name: readthedocs
   analytics:
     gtag: G-GGLCHNTQ3Z
+  features:
+    - navigation.footer
+
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/injener133
+      name: Связаться со мной
