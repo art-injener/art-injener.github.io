@@ -6,4 +6,9 @@
 
 ![cover](./files/cover.jpg)
 
-[Обо мне](about.md)
+
+<p align="center">
+
+<a href="https://art-injener.github.io/about">Обо мне</a>
+
+</p>

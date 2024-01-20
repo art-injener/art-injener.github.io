@@ -2,7 +2,12 @@ site_name: "Каптерка инженера-программиста"
 site_url: https://art-injener.github.io/
 nav:
   - Home: index.md
-  - About: about.md
+  - Обо мне: about.md
+  - МФ АС "Невод":
+    - Техническое задание:
+      - Введение: course/technical_task/intro.md
+      - ТЗ: course/technical_task/technical_task.md
+
 plugins:
   - search
   - i18n:
