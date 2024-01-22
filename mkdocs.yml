@@ -9,7 +9,9 @@ nav:
     - Техническое задание:
       - Введение: course/technical_task/intro.md
       - ТЗ: course/technical_task/technical_task.md
-
+    - Проектирование системы:
+      - Введение: course/system_design/intro.md
+      - База знаний: course/system_design/knowledge_base.md
 plugins:
   - search
   - i18n:
