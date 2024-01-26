@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://art-injener.github.io/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://art-injener.github.io/"/>
+    </url>
+    <url>
+        <loc>https://art-injener.github.io/about/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://art-injener.github.io/about/"/>
+    </url>
+    <url>
+        <loc>https://art-injener.github.io/course/system_design/intro/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://art-injener.github.io/course/system_design/intro/"/>
+    </url>
+    <url>
+        <loc>https://art-injener.github.io/course/system_design/knowledge_base/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://art-injener.github.io/course/system_design/knowledge_base/"/>
+    </url>
+    <url>
+        <loc>https://art-injener.github.io/course/system_design/system_design/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://art-injener.github.io/course/system_design/system_design/"/>
+    </url>
+    <url>
+        <loc>https://art-injener.github.io/course/technical_task/intro/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://art-injener.github.io/course/technical_task/intro/"/>
+    </url>
+    <url>
+        <loc>https://art-injener.github.io/course/technical_task/technical_task/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://art-injener.github.io/course/technical_task/technical_task/"/>
+    </url>
+</urlset>

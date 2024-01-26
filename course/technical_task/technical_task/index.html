@@ -1,0 +1,1644 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://art-injener.github.io/course/technical_task/technical_task/">
+      
+      
+        <link rel="prev" href="../intro/">
+      
+      
+        <link rel="next" href="../../system_design/intro/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+    
+    
+      
+        <title>ТЗ - Каптерка инженера-программиста</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-GGLCHNTQ3Z"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-GGLCHNTQ3Z",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-GGLCHNTQ3Z",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../.." title="Каптерка инженера-программиста" class="md-header__button md-logo" aria-label="Каптерка инженера-программиста" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Каптерка инженера-программиста
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ТЗ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Каптерка инженера-программиста" class="md-nav__button md-logo" aria-label="Каптерка инженера-программиста" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Каптерка инженера-программиста
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обо мне
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    МФ АС "Невод"
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            МФ АС "Невод"
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Техническое задание
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Техническое задание
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Введение
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ТЗ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ТЗ
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сокращения
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Введение
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Введение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.  Наименование АС
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Краткая характеристика области применения
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Основания для разработки
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.  Назначение разработки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Назначение разработки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Функциональное назначение ПО
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Эксплуатационное назначение ПО
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Требования к программе и программному изделию
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Требования к программе и программному изделию">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Требования к функциональным характеристикам
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1. Требования к серверной части (ЕССОД) МФ АС "Невод"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2. Требования к клиентской части (СПО НПС) МФ АС "Невод"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3. Требование к взаимодействию клиентской и серверной частей МФ АС "Невод"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Требования к надёжности
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1. Требования к обеспечению надежного (устойчивого) функционирования программы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2. Время восстановления после отказа
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3. Отказы из-за некорректных действий оператора
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Условия эксплуатации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#431" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Климатические условия эксплуатации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. Требования к видам обслуживания
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. Требования к численности и квалификации персонала
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Требования к составу и параметрам технических средств
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Требования к информационной и программной совместимости
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#451" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1. Требования к информационным структурам и методам решения
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#452" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2. Требования к исходным кодам и языкам программирования
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.2. Требования к исходным кодам и языкам программирования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#453" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3. Требования к программным средствам, используемым МФ АС
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Требования к маркировке и упаковке
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Требования к транспортированию и хранению
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Требования к программной документации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Предварительный состав программной документации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Технико-экономические показатели
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Стадии и этапы разработки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Стадии разработки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Этапы разработки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Порядок контроля и приёмки
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Проектирование системы
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Проектирование системы
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system_design/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Введение
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system_design/knowledge_base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    База знаний
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system_design/system_design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Проектирование
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сокращения
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Введение
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Введение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.  Наименование АС
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Краткая характеристика области применения
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Основания для разработки
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.  Назначение разработки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Назначение разработки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Функциональное назначение ПО
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Эксплуатационное назначение ПО
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Требования к программе и программному изделию
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Требования к программе и программному изделию">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Требования к функциональным характеристикам
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1. Требования к серверной части (ЕССОД) МФ АС "Невод"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2. Требования к клиентской части (СПО НПС) МФ АС "Невод"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3. Требование к взаимодействию клиентской и серверной частей МФ АС "Невод"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Требования к надёжности
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1. Требования к обеспечению надежного (устойчивого) функционирования программы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2. Время восстановления после отказа
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3. Отказы из-за некорректных действий оператора
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Условия эксплуатации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#431" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Климатические условия эксплуатации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. Требования к видам обслуживания
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. Требования к численности и квалификации персонала
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Требования к составу и параметрам технических средств
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Требования к информационной и программной совместимости
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#451" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1. Требования к информационным структурам и методам решения
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#452" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2. Требования к исходным кодам и языкам программирования
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.2. Требования к исходным кодам и языкам программирования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#453" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3. Требования к программным средствам, используемым МФ АС
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Требования к маркировке и упаковке
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Требования к транспортированию и хранению
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Требования к программной документации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Предварительный состав программной документации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Технико-экономические показатели
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Стадии и этапы разработки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Стадии разработки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Этапы разработки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Порядок контроля и приёмки
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>ТЗ</h1>
+
+<p>Составим упрощенное техническое задание на разработку учебной автоматизированной системы согласно ГОСТ 19 серии. </p>
+<h3 id="_1">Сокращения</h3>
+<ul>
+<li>ЕССОД - единая система сбора и обработки данных</li>
+<li>МКА - малый космический аппарат</li>
+<li>МФ АС - многофункциональная автоматизированная система</li>
+<li>НПС - наземная приемная станция</li>
+<li>ПОД - прием и обработка данных</li>
+<li>СПО - специальное программное обеспечение</li>
+<li>ЦОС - цифровая обработка сигналов</li>
+<li>ЦУП - центр управления полетами</li>
+</ul>
+<h3 id="1">1. Введение</h3>
+<h4 id="11">1.1.  Наименование АС</h4>
+<p>Многофункциональная автоматизированная система приема и обработки данных от малых космических аппаратов, сокращенно <strong>"МФ АС ПОД МКА"</strong>. 
+Шифр темы -  <strong>"Невод"</strong>.</p>
+<h4 id="12">1.2. Краткая характеристика области применения</h4>
+<p><strong>МФ АС "Невод"</strong> - учебная автоматизированная система, позволяющая принимать и обрабатывать радиосигналы малых космических аппаратов. </p>
+<p>Аппаратная часть АС основывается на применении общедоступных приемников типа <strong>SDR (Software-defined radio)</strong> в сочетании с различными видами антенных систем и поворотных устройств.</p>
+<p>Специальное программное обеспечение (СПО) из состава МФ АС позволяет осуществлять прием, 
+операции цифровой обработки и демодуляции сигналов для получения полезной информации (телеметрия, снимки с метеоспутников). </p>
+<p>МФ АС "Невод" должна состоять из 2-х частей:</p>
+<ol>
+<li>
+<p>СПО наземной приемной станции (НПС)</p>
+<p>Отвечает за настройку и работоспособность аппаратной части станции, получению и первичной обработки данных. Осуществляет контроль и диагностику аппаратуры, входящей в состав станции.
+Имеет несколько режимов работы:    </p>
+<ul>
+<li>потоковая передача данных;</li>
+<li>запись и воспроизведение сеанса вещания МКА;</li>
+<li>демодуляция (при наличии достаточных вычислительных мощностей) полученных от МКА данных;</li>
+<li>технологический (ручной) режим управления станцией;</li>
+<li>удаленный контроль (со стороны ЦУП или ЕССОД);</li>
+<li>режим диагностики работоспособности.</li>
+</ul>
+</li>
+<li>
+<p>СПО единой системы сбора и обработки данных (ЕССОД)</p>
+<p>СПО отвечает за централизованный сбор данных от всех доступных НПС.</p>
+<p>Решает следующие задачи:</p>
+<ul>
+<li>получение от внешних источников данных <strong>TLE</strong> (аббр. от англ. Two-Line Element set, двухстрочный набор элементов)  и формирование для НПС планов сеансов вещания МКА;</li>
+<li>обработка и визуализация бинарного потока данных от НПС (телеметрия, полезные данные);</li>
+<li>ЦОС, спектральный анализ сигнала и демодуляция данных сеанса вещания МКА;</li>
+<li>послесеансовая обработка данных вещания МКА;</li>
+<li>передача данных во внешние системы - например SatNOGS и т.д.</li>
+</ul>
+</li>
+</ol>
+<h3 id="2">2. Основания для разработки</h3>
+<p>Расширение инженерных практик и общедоступна образовательная деятельность</p>
+<h3 id="3">3.  Назначение разработки</h3>
+<h4 id="31">3.1. Функциональное назначение ПО</h4>
+<p>Назначением многофункциональной автоматизированной системы является прием, обработка и демодуляция радиосигналов от малых космических аппаратов. 
+Полученная информация передается во внешние системы-потребители, а также выводится на графический интерфейс МФ АС в виде 
+графиков, табличных представлений, спектрограмм и картографической проекции.
+МФ АС может выступать мостом между ЦУП любой организации и общественной сети станций приема спутниковой информации.</p>
+<h4 id="32">3.2. Эксплуатационное назначение ПО</h4>
+<p>МФ АС "Невод" предназначена для эксплуатации в учебных заведениях, радиолюбительских сообществах и домашних проектах.</p>
+<h3 id="4">4. Требования к программе и программному изделию</h3>
+<h4 id="41">4.1. Требования к функциональным характеристикам</h4>
+<p>МФ АС состоит из двух основных компонентов: клиентской и
+серверной частей, между которыми должно быть налажено сетевое взаимодействие.</p>
+<h4 id="411">4.1.1. Требования к серверной части (ЕССОД) МФ АС "Невод"</h4>
+<p>Архитектурные требования:</p>
+<ul>
+<li>возможность приема и обработки данных от 100 000 и более наземных станций наблюдения;</li>
+<li>возможность горизонтального масштабирования с учетом нагрузки;</li>
+<li>слабая связанность между компонентами, возможность расширения функционала, добавлением новых компонентов.</li>
+</ul>
+<p>В составе АС должны быть следующие подсистемы:</p>
+<ol>
+<li>
+<p>Подсистема планирования сеансов приема данных от МКА. </p>
+<p>Должна иметь следующий функционал и задачи:</p>
+<ul>
+<li>получение данных TLE от внешних источников;</li>
+<li>ведение журнала активных НПС;</li>
+<li>составление и централизованная рассылка планов сеансов приема МКА;</li>
+<li>формирование сценариев настройки НПС для проведения сеанса приема сигнала МКА;</li>
+<li>возможность получения информации о предстоящих сеансах через Telegram-бота;</li>
+<li>картографическое отображение орбиты движения МКА.</li>
+</ul>
+</li>
+<li>
+<p>Подсистема функционального контроля и диагностики наземных станций наблюдения.</p>
+<p>Должна иметь следующий функционал и задачи:</p>
+<ul>
+<li>графическое отображение диагностической информации о работоспособности НПС;</li>
+<li>база знаний с информацией о способах устранения неисправностей;</li>
+<li>картографическое отображение расположения НПС;</li>
+<li>статистика по НПС.</li>
+</ul>
+</li>
+<li>
+<p>Подсистема вывода информации об аппаратной и программной конфигурации НПС из состава сети станций.</p>
+</li>
+<li>
+<p>Подсистем интеграции с внешними системами (ЦУП, SatNOGS)</p>
+</li>
+<li>
+<p>Подсистема приема потока оцифрованного сигнала ("сырой" поток). 
+Предназначена для возможности оценки специалистами качества приема сигнала МКА.</p>
+<p>Должна иметь следующий функционал и задачи:</p>
+<ul>
+<li>прием и обработка данных;</li>
+<li>графический вывод в формате спектра и водопада;</li>
+<li>вывод основных характеристик полученного сигнала - частота, амплитуда, модуляция и т.д.. </li>
+</ul>
+</li>
+<li>
+<p>Подсистема обработки телеметрии.</p>
+<p>Должна поддерживать возможность декодирования данных телеметрии от различных МКА. 
+Необходимо предусмотреть возможность расширения базы алгоритмов демодуляции телеметрии. </p>
+</li>
+<li>
+<p>Подсистема вторичной обработки информации.</p>
+<p>Должна иметь следующий функционал и задачи:</p>
+<ul>
+<li>сеансовая и послесеансовая обработка сигналов МКА;</li>
+<li>поддержка набора алгоритмов для демодуляции сигналов;</li>
+<li>система хранения записей сигналов МКА:</li>
+<li>ML-алгоритмы анализа сигналов</li>
+</ul>
+</li>
+</ol>
+<p>Для графического представления UI необходимо использовать web-технологии и любой из доступных браузеров : Mozilla Firefox, Chrome, Opera, Yandex Browser и т.д.</p>
+<p>Запрещается использовать JavaScript - framework, только чистый код на JavaScript.</p>
+<p>Серверная часть МФ АС "Невод" должна обеспечивать не менее 1000 одновременных подключений операторов.</p>
+<p>С учетом возможности одновременного доступа несколькими операторами к МФ АС "Невод", 
+требуется проработать механизм совместных сеансов и технических учетных записей, для управления НПС.</p>
+<p>Для инсталяции и обновления МФ АС допускается использовать следующие, инструменты:</p>
+<ul>
+<li>Установочные скрипты; </li>
+<li>Менеджер установок ОС Linux и deb, rpm-пакеты;</li>
+<li>Использование CПО Docker.</li>
+</ul>
+<h4 id="412">4.1.2. Требования к клиентской части (СПО НПС) МФ АС "Невод"</h4>
+<p>Архитектурные требования:</p>
+<ul>
+<li>Возможность вносить изменения в конфигурацию программ для различного состава аппаратуры станции без повторной компиляции СПО;</li>
+<li>Обеспечение отказоустойчивости, автоматического перезапуска и восстановления работоспособности СПО после сбоя.</li>
+</ul>
+<p>В составе АС должны быть следующие подсистемы:</p>
+<ol>
+<li>
+<p>Подсистема контроля и диагностики аппаратуры и ПО из состава НПС.</p>
+<p>Должна иметь следующий функционал и задачи:</p>
+<ul>
+<li>сбор информации о вычислительных ресурсах;</li>
+<li>контроль работоспособности устройств;</li>
+<li>сбор статистики потребления ресурсов и производительности;</li>
+<li>подсистема восстановления работоспособности.</li>
+</ul>
+</li>
+<li>
+<p>Подсистема настройки и управления аппаратурой. 
+Обеспечивает выполнения сценариев автоматической настройки аппаратуры НПС для приема различных МКА.</p>
+</li>
+<li>
+<p>Подсистема управления режимами работы НПС.</p>
+<p>Режимы:</p>
+<ul>
+<li>удаленное управление (управление выполняется со стороны ЕССОД);</li>
+<li>технологический режим.</li>
+</ul>
+</li>
+<li>
+<p>Подсистема интеграции с ЕССОД.
+Обеспечивает взаимодействие и управление НПС, согласно утвержденному протоколу информационно-логического сопряжения.</p>
+</li>
+<li>
+<p>Подсистема визуализации (технологический режим):</p>
+<ul>
+<li>графический вывод принятого сигнала в формате:<ul>
+<li>спектр;</li>
+<li>водопад;</li>
+<li>осциллограмма;</li>
+</ul>
+</li>
+<li>экранные формы ручного управления настройками аппаратуры.</li>
+</ul>
+</li>
+<li>
+<p>Подсистема первичной обработки данных.</p>
+<p>Должна иметь следующий функционал и задачи:</p>
+<ul>
+<li>получение и потоковая передача от приемника бинарных данных;</li>
+<li>запись и воспроизведение сеанса вещания МКА;</li>
+<li>демодуляция (при наличии достаточных вычислительных мощностей) полученных от МКА данных;</li>
+<li>цифровая обработка сигнала - определение характеристик полученного сигнала - частота, амплитуда, модуляция и т.д (в технологическом режиме).</li>
+</ul>
+</li>
+<li>
+<p>Подсистема логирования работы системы и действий пользователя.</p>
+</li>
+</ol>
+<h4 id="413">4.1.3. Требование к взаимодействию клиентской и серверной частей МФ АС "Невод"</h4>
+<p>Взаимодействие между серверной (ЕССОД) и клиентской(НПС) частями должны быть организованы по средствам:</p>
+<ul>
+<li>бинарных протоколов взаимодействия (транснпорт tcp, udp,quic) </li>
+<li>gRPC</li>
+<li>брокеры сообщений (NATS,RabbitMQ и т.д)</li>
+</ul>
+<p>Архитектура REST (JSON через HTTP) и обмен сообщениями в формате SOAP (XML поверх SOAP через HTTP) запрещены для организации взаимодействия между ЕССОД и НПС.</p>
+<p>Допускается реализации архитектуры REST для подсистемы визуализации технологического режима в НПС.</p>
+<h4 id="42">4.2 Требования к надёжности</h4>
+<h4 id="421">4.2.1. Требования к обеспечению надежного (устойчивого) функционирования программы</h4>
+<p>Требования не предъявляются</p>
+<h4 id="422">4.2.2. Время восстановления после отказа</h4>
+<p>Время восстановления после отказа, вызванного сбоем электропитания технических средств (иными внешними факторами), 
+не фатальным сбоем (не крахом) операционной системы, не должно превышать времени, необходимого на перезагрузку операционной системы и запуск программы,
+при условии соблюдения условий эксплуатации технических и программных средств.</p>
+<p>Время восстановления после отказа, вызванного неисправностью технических средств, фатальным сбоем (крахом) операционной системы, 
+не должно превышать времени, требуемого на устранение неисправностей технических средств и переустановки программных средств.</p>
+<h4 id="423-">4.2.3. Отказы из-за некорректных действий оператора</h4>
+<p>Требования не предъявляются</p>
+<h4 id="43">4.3. Условия эксплуатации</h4>
+<h4 id="431">4.3.1. Климатические условия эксплуатации</h4>
+<p>Требования не предъявляются</p>
+<h4 id="432">4.3.2. Требования к видам обслуживания</h4>
+<p>Требования не предъявляются</p>
+<h4 id="433">4.3.3. Требования к численности и квалификации персонала</h4>
+<p>Требования не предъявляются  </p>
+<h4 id="44">4.4 Требования к составу и параметрам технических средств</h4>
+<p>В состав технических средств НПС должны входить:</p>
+<ul>
+<li>персональная ЭВМ. Варианты замены: ноутбук, одноплатный мини-компьютер с ethernet и usb интерфейсами;</li>
+<li>Минимальные системные требования:<ul>
+<li>Количество ядер процессора - 2;</li>
+<li>Архитектура процессора: х86_64, ARM;</li>
+<li>Частота процессора - 1500 МГц;</li>
+<li>Объем оперативной памяти - 1024 МБ;</li>
+<li>Объем SSD (SD Card) - 128 Гб;</li>
+<li>Скорость записи на носитель - мин 10MB/sec;</li>
+</ul>
+</li>
+<li>антенная система:<ul>
+<li>всенаправленная антенная система диапазона 100 - 2000 МГц;</li>
+<li>направленная антенна диапазона 100 - 2000 МГЦ с двухкоординатной антенно-поворотной платформой;</li>
+</ul>
+</li>
+<li>приемник SDR (RTL-SDR v3, AirSpy, HackRF);</li>
+<li>МШУ.</li>
+</ul>
+<p>В состав технических средств ЕССОД должны входить:</p>
+<ul>
+<li>Выделенный сервер;</li>
+<li>Единый с НПС сетевой контур, со скоростью обмена данными не ниже 10 Mbit/s.</li>
+</ul>
+<h4 id="45">4.5 Требования к информационной и программной совместимости</h4>
+<h4 id="451">4.5.1. Требования к информационным структурам и методам решения</h4>
+<p>Пользовательский интерфейс должен быть интуитивно понятным и содержать подсказки. 
+Должна быть возможность выполнения операций записи сигнала МКА и сохранения полученного файла на внешний носитель.</p>
+<h3 id="452">4.5.2. Требования к исходным кодам и языкам программирования</h3>
+<p>Исходные коды программ из состава МФ АС "Невод" должны быть реализованы на следующих языках программирования:</p>
+<ul>
+<li>Golang </li>
+<li>Python</li>
+<li>C</li>
+<li>JavaScript (без использования фреймворков - react, angular, vue и т.д.).</li>
+</ul>
+<p>В качестве интегрированной среды разработки программы должна быть использована одна из сред: Goland, PyCharm, VS Code. </p>
+<h4 id="453">4.5.3. Требования к программным средствам, используемым МФ АС</h4>
+<p>МФ АС "Невод" должна функционировать под управлением одной из ОС семейства Linux: Ubuntu, Astra Linux, ALT Linux и т.д. 
+Используемые библиотеки сторонних разработчиков должны иметь исходные коды.</p>
+<h4 id="46">4.6 Требования к маркировке и упаковке</h4>
+<p>Требования не предъявляются  </p>
+<h4 id="47">4.7 Требования к транспортированию и хранению</h4>
+<p>Требования не предъявляются  </p>
+<h4 id="5">5 Требования к программной документации</h4>
+<h4 id="51">5.1. Предварительный состав программной документации</h4>
+<p>Состав программной документации должен включать в себя:</p>
+<ol>
+<li>Техническое задание.</li>
+<li>Пояснительная записка.</li>
+<li>Описание применения.</li>
+<li>Руководство системного программиста.</li>
+<li>Руководство оператора.</li>
+</ol>
+<h4 id="6-">6 Технико-экономические показатели</h4>
+<p>Требования не предъявляются </p>
+<h4 id="7">7 Стадии и этапы разработки</h4>
+<h4 id="71">7.1. Стадии разработки</h4>
+<p>Разработка должна быть проведена в три стадии:</p>
+<ol>
+<li>Разработка технического задания.</li>
+<li>Рабочее проектирование.</li>
+<li>Внедрение.</li>
+</ol>
+<h4 id="72">7.2. Этапы разработки</h4>
+<p>На стадии разработки технического задания должен быть выполнен этап разработки, согласования и утверждения настоящего технического задания.</p>
+<p>На стадии рабочего проектирования должны быть выполнены перечисленные ниже этапы работ:</p>
+<ol>
+<li>Разработка программ из состава МФ АС.</li>
+<li>Разработка программной документации.</li>
+<li>Испытания МФ АС.</li>
+</ol>
+<p>На стадии внедрения должен быть выполнен этап разработки - подготовка и передача программы в опытную эксплуатацию.</p>
+<h4 id="8">8 Порядок контроля и приёмки</h4>
+<p>Требования не предъявляются  </p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Введение">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                Введение
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../system_design/intro/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Введение">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                Введение
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Артем Данильченко
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/injener133" target="_blank" rel="noopener" title="Связаться со мной" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      
+    
+  </body>
+</html>
