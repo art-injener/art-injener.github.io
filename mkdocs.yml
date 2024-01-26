@@ -23,7 +23,7 @@ plugins:
           site_name: "Каптерка инженера-программиста"
           default: true
 theme:
-  name: readthedocs
+  name: material
   analytics:
     gtag: G-GGLCHNTQ3Z
   features:
@@ -35,3 +35,13 @@ extra:
     - icon: fontawesome/brands/telegram
       link: https://t.me/injener133
       name: Связаться со мной
+  analytics:
+    provider: google
+    property: G-GGLCHNTQ3Z
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
