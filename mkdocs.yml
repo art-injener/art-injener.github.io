@@ -12,6 +12,7 @@ nav:
     - Проектирование системы:
       - Введение: course/system_design/intro.md
       - База знаний: course/system_design/knowledge_base.md
+      - Проектирование: course/system_design/system_design.md
 plugins:
   - search
   - i18n:
