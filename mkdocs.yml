@@ -1,18 +1,10 @@
-site_name: "Каптерка инженера-программиста"
+site_name: "Цех 130"
 site_url: https://art-injener.github.io/
 copyright: Copyright &copy; 2024 Артем Данильченко
 
 nav:
   - Home: index.md
   - Обо мне: about.md
-  - МФ АС "Невод":
-    - Техническое задание:
-      - Введение: course/technical_task/intro.md
-      - ТЗ: course/technical_task/technical_task.md
-    - Проектирование системы:
-      - Введение: course/system_design/intro.md
-      - База знаний: course/system_design/knowledge_base.md
-      - Проектирование: course/system_design/system_design.md
 plugins:
   - search
   - i18n:
@@ -21,7 +13,7 @@ plugins:
         - locale: ru
           name: Russian
           build: true
-          site_name: "Каптерка инженера-программиста"
+          site_name: "Цех 130"
           default: true
 theme:
   name: material
